@@ -1,0 +1,210 @@
+
+  :root {
+    --rand-pos: 500px;
+    --rand-neg: -500px;
+    --rand-vector: 500px;
+    --rand-rotate: 90deg;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+  .text {
+    color: rgb(68, 68, 68);
+    text-align: center;
+    font-family:'Source Code Pro', monospace;
+    position: absolute;
+    bottom: 20%;
+    left: 20%;
+    cursor:pointer;
+  }
+
+  .logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 800px;
+    height: 227px;
+    margin-top: -110px; /* Half the height */
+    margin-left: -400px; /* Half the width */
+    z-index: 1
+  }
+    
+
+  .container {
+    cursor:pointer;
+  }
+
+  #messenger {
+    position: absolute;
+    color: rgb(68, 68, 68);
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Source Code Pro', monospace;
+    font-size: 25px;
+    white-space: nowrap;
+    text-shadow: 0 2px 2px rgba(#000, 0.9);
+    z-index: 2;
+  }
+
+  .sat {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 231px;
+    margin-top: -80px; /* Half the height */
+    margin-left: -250px; /* Half the width */
+    animation-name     : zoom  , appear  /*, flyup*/; 
+    animation-delay    : 8s    , 8s      /*, 1s*/; 
+    animation-duration : 5s    , 5s    /*, 3.5*/; 
+    animation-timing-function: cubic-bezier(1,0,1,.5);
+    animation-iteration-count: 1;
+    opacity:0%;
+    z-index: 0;
+  }
+
+  .cstand {
+    position: absolute;
+    max-width:60px;
+    opacity:0%;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    animation-name      : cstands , appear;
+    animation-delay     : 1s      , 1s;
+    animation-duration  : 5s      , 5s;
+    animation-iteration-count: infinite; 
+  }
+
+  #cstand-1{    
+    animation-name     : cstand1  , appear;
+    animation-delay    : 11s      , 11s; 
+    animation-duration : 6s       , 6s;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(1,0,1,.5);
+    top: 51%;
+    left: 51%;
+    }
+    #cstand-2{    
+    animation-name     : cstand2  , appear;
+    animation-delay    : 11s      , 11s; 
+    animation-duration : 7s       , 7s;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(1,0,1,.5);    
+    top: 48%;
+    left: 50%;
+    }
+    #cstand-3{    
+    animation-name     : cstand3  , appear;
+    animation-delay    : 11s      , 11s; 
+    animation-duration : 6s       , 6s;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(1,0,1,.5);
+    top: 51%;
+    left: 49%;
+    }
+    #cstand-4{    
+    animation-name     : cstand4  , appear;
+    animation-delay    : 11s      , 11s; 
+    animation-duration : 5s       , 5s;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(1,0,1,.5);
+    top: 51%;
+    left: 49%;
+    }
+    #cstand-5{    
+    animation-name     : cstand5  , appear;
+    animation-delay    : 11s      , 11s; 
+    animation-duration : 6s       , 6s;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(1,0,1,.5);
+    top: 49%;
+    left: 48%;
+    }
+    #cstand-6{    
+    animation-name     : cstand6  , appear;
+    animation-delay    : 11s      , 11s; 
+    animation-duration : 5s       , 5s;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(1,0,1,.5);
+    top: 51%;
+    left: 50%;
+    }
+    #cstand-7{    
+    animation-name     : cstand7  , appear;
+    animation-delay    : 11s      , 11s; 
+    animation-duration : 4s       , 4s;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(1,0,1,.5);
+    top: 50%;
+    left: 50%;
+    }
+    #cstand-8{    
+    animation-name     : cstand8  , appear;
+    animation-delay    : 11s      , 11s; 
+    animation-duration : 5s       , 5s;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(1,0,1,.5);
+    top: 50%;
+    left: 51%;
+    }
+    
+
+@keyframes zoom {
+  from {transform:scale(.01,.01) translate(0) rotate(0)}
+  to {transform:scale(2,2) translate(var(--rand-vector),var(--rand-vector)) rotate(90deg)}
+}
+@keyframes appear {
+  from {opacity: 0%;}
+  1% {opacity: .1%;}
+  10% {opacity: 75%;}
+  50% {opacity: 100%;}
+  to {opacity: 100%;}
+}
+
+@keyframes cstands{
+  from {transform:scale(.01,.01) translate(0) rotate(0)}
+  to {transform:scale(2,2) translate(var(--rand-vector),var(--rand-vector)) rotate(90deg)}
+}
+
+@keyframes cstand1{ 
+  from {transform:scale(.01,.01) translate(0) rotate(0)}
+  to {transform:scale(2,2) translate(100,100) rotate(90deg)}
+}
+
+/*
+@keyframes cstand1 {
+  from {transform:scale(.01,.01) translate(0) rotate(0)}
+  to {transform:scale(2,2) translate((),()) rotate(var(--rand-rotate))}
+}
+@keyframes cstand2 {
+  from {transform:scale(.01,.01) translate(0) rotate(0)}
+  to {transform:scale(2,2) translate(var(--rand-vector),var(--rand-vector)) rotate(var(--rand-rotate))}
+}
+@keyframes cstand3 {
+  from {transform:scale(.01,.01) translate(0) rotate(0)}
+  to {transform:scale(2,2) translate(var(--rand-vector),var(--rand-vector)) rotate(var(--rand-rotate))}
+}
+@keyframes cstand4 {
+  from {transform:scale(.01,.01) translate(0) rotate(0)}
+  to {transform:scale(2,2) translate(var(--rand-vector),var(--rand-vector)) rotate(var(--rand-rotate))}
+}
+@keyframes cstand5 {
+  from {transform:scale(.01,.01) translate(0) rotate(0)}
+  to {transform:scale(2,2) translate(var(--rand-vector),var(--rand-vector)) rotate(var(--rand-rotate))}
+}
+@keyframes cstand6 {
+  from {transform:scale(.01,.01) translate(0) rotate(0)}
+  to {transform:scale(2,2) translate(var(--rand-vector),var(--rand-vector)) rotate(var(--rand-rotate))}
+}
+@keyframes cstand7 {
+  from {transform:scale(.01,.01) translate(0) rotate(0)}
+  to {transform:scale(2,2) translate(var(--rand-vector),var(--rand-vector)) rotate(var(--rand-rotate))}
+}
+@keyframes cstand8 {
+  from {transform:scale(.01,.01) translate(0) rotate(0)}
+  to {transform:scale(2,2) translate(var(--rand-vector),var(--rand-vector)) rotate(var(--rand-rotate))}
+}
+
+*/
